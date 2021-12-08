@@ -5,21 +5,21 @@
 class Ship < Formula
   desc "Launch your code with one click"
   homepage "https://spaceship.run"
-  version "0.0.2"
+  version "0.0.3"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/onspaceship/ship/releases/download/v0.0.2/ship_0.0.2_darwin_amd64.tar.gz"
-      sha256 "e112a9e06b2f26279709a2be559f13278a7f3f2023d3acca8ce07130924b3545"
+    if Hardware::CPU.arm?
+      url "https://github.com/onspaceship/ship/releases/download/v0.0.3/ship_0.0.3_darwin_arm64.tar.gz"
+      sha256 "dfba3d82e4231878e98d7fdc626c18d4f879e261fa1e772dbb26af1b4c8731f9"
 
       def install
         bin.install "ship"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/onspaceship/ship/releases/download/v0.0.2/ship_0.0.2_darwin_arm64.tar.gz"
-      sha256 "f8a42482bbb6f86c5e9b4e452954ed3807a0fe0451dba96163860b84e92dc5b0"
+    if Hardware::CPU.intel?
+      url "https://github.com/onspaceship/ship/releases/download/v0.0.3/ship_0.0.3_darwin_amd64.tar.gz"
+      sha256 "1954f5bf842f7305bede6169369207d652d6ffcdb3c8ef5d75c9e07226d44824"
 
       def install
         bin.install "ship"
@@ -29,16 +29,16 @@ class Ship < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/onspaceship/ship/releases/download/v0.0.2/ship_0.0.2_linux_arm64.tar.gz"
-      sha256 "be7016d16c1682519239701b781f1bc3f775f43e0295eecdda03260c0f2533cf"
+      url "https://github.com/onspaceship/ship/releases/download/v0.0.3/ship_0.0.3_linux_arm64.tar.gz"
+      sha256 "4912299e87255a82f63c0e53a5bb65d68b4e95d7b565c53ead2eb28f56caa7c1"
 
       def install
         bin.install "ship"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/onspaceship/ship/releases/download/v0.0.2/ship_0.0.2_linux_amd64.tar.gz"
-      sha256 "80bb9b5eb070a3294b4b75d376999437f67cdbd6c533ace16c13510637cb16e9"
+      url "https://github.com/onspaceship/ship/releases/download/v0.0.3/ship_0.0.3_linux_amd64.tar.gz"
+      sha256 "9cd4feacec9aec8380552ec8ef3e449986da91054bc395cd40fee7691d80b81d"
 
       def install
         bin.install "ship"
